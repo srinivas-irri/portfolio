@@ -1,10 +1,9 @@
 import { useState, useEffect, useRef, } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
-import { CiGlobe } from "react-icons/ci";
 import { Link } from "react-scroll";
 import "../assets/styles/navbar.css";
 import { number } from "framer-motion";
 import { logo } from "../assets/images";
+import {CiGlobe, FaBars, FaTimes} from '../icons/reacticons.js';
 
 function Navbar({ darkMode, setDarkMode }) {
     const [open, setOpen] = useState(false);

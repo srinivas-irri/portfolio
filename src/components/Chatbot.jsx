@@ -69,7 +69,7 @@ const handleKeyDown = (e) => {
                         <div className="chat-head-title">
                             <span className="text-white text-sm font-md chat-title-text">Srini AI Agent</span>
                         </div>
-                        <button className="cursor-pointer chat-close-btn" onClick={ handleClose }><IoCloseOutline /></button>
+                        <button className="cursor-pointer chat-close-btn text-white" onClick={ handleClose }><IoCloseOutline /></button>
                     </div>
 
                     {/* <div className="min-h-[450px] h-full chat-msgs" id="chatMsgs"></div> */}
@@ -93,9 +93,9 @@ const handleKeyDown = (e) => {
                                 )}
                                 
                                 {loading && (
-                                    <div className="text-sm text-gray-300 bot_response leading-6 mb-6 text-left flex gap-3 items-start justify-start">
+                                    <div className="text-sm text-gray-300 bot_response leading-6 mb-6 text-left flex gap-1 items-start justify-start">
                                         <div className='user_icon flex items-center text-center w-[30px] h-[30px] bot-icon'><BsStars className='m-auto w-[18px] h-[18px]' /></div>
-                                        <div className='text-sm text-gray-400'>Loading...</div>
+                                        <div className='text-sm text-gray-400 loading_chat'>Loading...</div>
                                     </div>
                                 )}
 

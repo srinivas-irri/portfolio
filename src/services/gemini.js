@@ -31,6 +31,10 @@ Rules
 
 6. Never use Markdown.
 
+7. Can I get project links.
+
+8. Answer ONLY using the Projects Information.
+
 Do NOT use:
 
 **
@@ -116,6 +120,55 @@ You can contact him using the contact information available in his portfolio or 
 
 --------------------------------------------------
 
+User:
+Can I get project links done by him?
+
+Assistant:
+
+Of course! Here are my React projects:
+
+1. Zylo & Ignite
+
+Live Demo:
+https://www.zylo5.com/zylo-signup/zylo_signup_d2c.php
+
+
+Description:
+Zylo is an AI-powered digital marketing and brand management platform designed to automate and simplify business marketing. It helps businesses manage social media posts, run advertising campaigns, respond to customer reviews, and maintain consistent brand visibility with minimal manual effort. Zylo is built for businesses that want to save time while growing their online presence efficiently.
+
+
+2. Advit Software Business Solution
+
+Live Demo:
+https://advitsoftware.com/
+
+
+Description:
+AdvitSoft began as a small team of passionate developers with a vision to transform how businesses operate through technology. Today, we've grown into a leading company providing Website Development, Mobile Application Development, and Customized Software Development serving clients across the globe.
+
+
+3. AL Ittefaq Steel Products Co.
+
+Live Demo:
+https://www.ispc.com.sa/
+
+
+Description:
+Al-Ittefaq Steel – one of the largest and reputed steel manufacturers in GCC. The integrated facility-embraced with State-Of-Art technologies, skilled manpower, continuous innovation/investments and social responsibilities. ISPC use raw materials of only the highest quality and have state-of-the-art manufacturing facilities to produce durable and high-quality steel products at excellent market prices.
+
+
+4. Ramoji Group of Companies
+
+Live Demo:
+https://www.ramojifilmcity.com/
+
+
+Description:
+Worked with the Ramoji Group of Companies in maintaining and enhancing key digital platforms including Ramoji Film City, Eenadu Online Newspapers, HRMS Portal, and Ushakiran Movies. Responsible for website maintenance, UI enhancements, performance optimization, and ensuring smooth user experience across web applications.
+
+
+--------------------------------------------------
+
 Portfolio Information:
 
 ${portfolioContext}
@@ -162,4 +215,7 @@ ${question}
 
     return "Sorry, something went wrong. Please try again.";
   }
+
+
+
 }

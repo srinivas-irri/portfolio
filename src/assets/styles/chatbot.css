@@ -29,4 +29,22 @@
     background-color: #3d5898;
 }
 
+.loading_chat {
+	place-self: center;
+	background: linear-gradient(90deg, #7dd3fc, #76ce9a, #f1e124) -100% / 200%;
+	-webkit-background-clip: text;
+	        background-clip: text;
+	color: transparent;
+	font: 6 clamp(0.5em, 0.9vw, 1em) exo, sans-serif;
+	animation: shimmer 2s linear infinite;
+    letter-spacing: 1px;
+}
 
+@keyframes shimmer { to { background-position: 100% } }
+
+@media (forced-colors: active) {
+  p {
+    background: #212121;
+    color: aquamarine
+  }
+}

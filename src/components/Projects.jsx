@@ -1,5 +1,7 @@
 import portfolioData from "../data/portfolioData";
 import ('../assets/styles/projects.css');
+import { CiGlobe } from '../icons/reacticons.js';
+import { Link } from "react-scroll";
 
 function Projects(props) {
 
@@ -20,6 +22,9 @@ function Projects(props) {
           (project, index) => (
             <div key={index} className="relative text-left border rounded-xl p-6 bg-[#111a2e] border-[rgba(255,255,255,0.2)] transition-all duration-700 hover:-translate-y-3 hover:bg-[#16203a] hover:transition-all hover:duration-700 project-section">
               <h3 className="text-1xl font-medium text-white ">{project.title}</h3>
+              <div className="flex gap-2 items-center pt-3 projects_link"><CiGlobe className="text-yellow-300" />
+                 <a href={project.live} className="text-emerald-400 text-sm hover:underline text-ellipsis overflow-hidden whitespace-nowrap" target="_blank">{project.live}</a>
+              </div>
               <p className="mt-3 text-gray-400 text-[16px] leading-6"> {project.description}</p>
 
               <div className="inline-block mt-4">

@@ -35,7 +35,7 @@ Strong problem-solving skills with extensive experience collaborating in <strong
          title: "Experience", description: "14+ Years"
       },
       {
-         title: "Focus", description: "Angular, React and AI tools like Windsurf, Cursor, Chatgpt and Gemini"
+         title: "Focus", description: "Angular and React Development"
       },
       {
          title: "Status", description: "Available"
@@ -152,28 +152,32 @@ Strong problem-solving skills with extensive experience collaborating in <strong
     {
       sl: "1",
       title: "Zylo & Ignite",
-      description: "Zylo is an AI-powered digital marketing and brand management platform designed to automate and simplify business marketing. It helps businesses manage social media posts, run advertising campaigns, respond to customer reviews, and maintain consistent brand visibility with minimal manual effort. Zylo is built for businesses that want to save time while growing their online presence efficiently",
+      live: "https://www.zylo5.com/zylo-signup/zylo_signup_d2c.php",
+      description: "Zylo is an AI-powered digital marketing and brand management platform designed to automate and simplify business marketing. It helps businesses manage social media posts, run advertising campaigns, respond to customer reviews, and maintain consistent brand visibility with minimal manual effort. Zylo is built for businesses that want to save time while growing their online presence efficiently.",
       company: "Buzzboard India Pvt Ltd",
       tech: ["Angular 15", "Angular Material", "Html & Css", "Bootstrap", "Javascript", "Jquery", "Node", "Restpack API" ]
     },
     {
       sl: "2",
       title: "AL Ittefaq Steel Products Co.",
-      description: "Al-Ittefaq Steel – one of the largest and reputed steel manufacturers in GCC. The integrated facility-embraced with State-Of-Art technologies, skilled manpower, continuous innovation/investments and social responsibilities. ISPC use raw materials of only the highest quality and have state-of-the-art manufacturing facilities to produce durable and high-quality steel products at excellent market prices",
+      live: "https://www.ispc.com.sa/",
+      description: "Al-Ittefaq Steel – one of the largest and reputed steel manufacturers in GCC. The integrated facility-embraced with State-Of-Art technologies, skilled manpower, continuous innovation/investments and social responsibilities. ISPC use raw materials of only the highest quality and have state-of-the-art manufacturing facilities to produce durable and high-quality steel products at excellent market prices.",
       company: "Rize Software Solutions Pvt. Ltd",
       tech: ["Html5 & Css3", "Bootstrap", "Wordpress", "Javascript", "Jquery"]
     },
     {
       sl: "3",
       title: "Advit Software Business Solution",
-      description: "AdvitSoft began as a small team of passionate developers with a vision to transform how businesses operate through technology. Today, we've grown into a leading company providing Website Development, Mobile Application Development, and Customized Software Development serving clients across the globe",
+      live: "https://advitsoftware.com/",
+      description: "AdvitSoft began as a small team of passionate developers with a vision to transform how businesses operate through technology. Today, we've grown into a leading company providing Website Development, Mobile Application Development, and Customized Software Development serving clients across the globe.",
       company: "Rize Software Solutions Pvt. Ltd",
       tech: ["Html5 & Css3", "Bootstrap", "Wordpress", "Javascript", "Jquery"]
     },
      {
       sl: "4",
       title: "Ramoji Group of Companies",
-      description: "Worked with the Ramoji Group of Companies in maintaining and enhancing key digital platforms including Ramoji Film City, Eenadu Online Newspapers, HRMS Portal, and Ushakiran Movies. Responsible for website maintenance, UI enhancements, performance optimization, and ensuring smooth user experience across web applications",
+      live: "https://www.ramojifilmcity.com/",
+      description: "Worked with the Ramoji Group of Companies in maintaining and enhancing key digital platforms including Ramoji Film City, Eenadu Online Newspapers, HRMS Portal, and Ushakiran Movies. Responsible for website maintenance, UI enhancements, performance optimization, and ensuring smooth user experience across web applications.",
       company: "Margadarsi Computer",
       tech: ["Html5 & Css3", "Bootstrap", "Wordpress", "Javascript", "Jquery"]
     },
