@@ -3,7 +3,9 @@ import { Link } from "react-scroll";
 import "../assets/styles/navbar.css";
 import { number } from "framer-motion";
 import { logo } from "../assets/images";
-import {CiGlobe, FaBars, FaTimes} from '../icons/reacticons';
+import { CiGlobe } from "react-icons/ci";
+import { FaBars } from "react-icons/fa";
+import { FaTimes } from "react-icons/fa";
 
 function Navbar({ darkMode, setDarkMode }) {
     const [open, setOpen] = useState(false);

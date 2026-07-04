@@ -1,6 +1,6 @@
 import portfolioData from "../data/portfolioData";
 import ('../assets/styles/projects.css');
-import { CiGlobe } from '../icons/reacticons';
+import { CiGlobe } from "react-icons/ci";
 import { Link } from "react-scroll";
 
 function Projects(props) {
