@@ -55,7 +55,7 @@ const handleKeyDown = (e) => {
     return (
         <div className='relative h-full'>
             {isShow && (
-               <div className="fixed top-0 left-0 z-9 bg-[rgba(0,_0,_0,_0.7)] w-full h-full min-[360px]:block min-[1024px]:hidden overlay"></div>
+               <div className="fixed top-0 left-0 z-98 bg-[rgba(0,_0,_0,_0.7)] w-full h-full min-[360px]:block min-[1024px]:hidden overlay"></div>
             )}
 
             <button className="fixed z-9999 bottom-[40px] right-10 rounded-4xl px-6 py-3 flex gap-1 items-center text-md font-lg text-white text-md cursor-pointer bg-[linear-gradient(135deg,#5B8DEF_0%,#3FD0C9_100%)] shadow-[0_4px_24px_rgba(91,141,239,.6)] transition-all duration-400 hover:-translate-y-1 hover:transition-all duration-400 max-[767px]:px-2 max-[767px]:rounded-[6px] max-[640px]:right-6 chat-fab" id="chatFab" title="Srini Portfolio Chatbot" onClick={()=> setIsShow(!isShow)}>
