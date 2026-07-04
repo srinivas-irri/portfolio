@@ -1,0 +1,9 @@
+.last-word {
+    font-family: var(--secondary-font);
+    font-weight: bold;
+    background: linear-gradient(120deg, var(--accent-primary) 27%, #da8afb 57%, var(--accent-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+}

@@ -1,0 +1,11 @@
+.user_info_section {
+    h1 {
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+   
+    .description p {
+        font-family: var(--secondary-font);
+    }
+}

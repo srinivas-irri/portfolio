@@ -1,0 +1,54 @@
+nav.floating-menu-bar {
+
+    & .floating-sub-menu {
+    
+        & .cursor-pointer {
+
+            &:hover {
+                .s-bar {
+                    background: #fff;
+                    -webkit-transition: all 0.3s ease-in;
+                    -moz-transition: all 0.3s ease-in;
+                    -o-transition: all 0.3s ease-in;
+                    transition: all 0.3s ease-in;
+                }
+            }
+
+
+            &.active-link {
+
+                & .s-bar {
+                    background: #55ade8 !important;
+                    width: 40px !important;
+                    -webkit-transition: all 0.3s ease-in;
+                    -moz-transition: all 0.3s ease-in;
+                    -o-transition: all 0.3s ease-in;
+                    transition: all 0.3s ease-in;
+                }
+            }
+        }
+    }
+}
+.social-info li a {
+    font-size: 14px;
+    font-family: "JetBrains Mono", monospace;
+    height: 12px;
+    display: inline-block;
+}
+
+.mobile_menu:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 3px;
+    padding: 1px;
+    background: linear-gradient(135deg, transparent, var(--blue), transparent);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    /* opacity: 0; */
+    transition: opacity .3s;
+    pointer-events: none;
+
+}

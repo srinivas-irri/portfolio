@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+:root {
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #fff;
+  --blue: #5B8DEF;
+  --border: #e5e4e7;
+  --code-bg: #f4f3ec;
+  --accent: #7dd3fc;
+  --accent-primary: #55ade8;
+  --accent-secondary: #6fc94a;
+  --accent-bg: rgba(170, 59, 255, 0.1);
+  --accent-border: rgba(170, 59, 255, 0.5);
+  --social-bg: rgba(244, 243, 236, 0.5);
+  --shadow:
+    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  /** Custom styles **/
+  --body-color: #080b16;
+  --primary-font: "JetBrains Mono", ui-monospace, monospace;
+  --secondary-font: "Plus Jakarta Sans", sans-serif;
+  --contact-font: "Space Grotesk", sans-serif;
+  --nav-font-size: 14px;
+  --primary-fonts-size: 16px;
+  --title-font-size: 38px;
+  
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #9ca3af;
+    --text-h: #f3f4f6;
+    --bg: #16171d;
+    --border: #2e303a;
+    --code-bg: #1f2028;
+    --accent: #c084fc;
+    --accent-bg: rgba(192, 132, 252, 0.15);
+    --accent-border: rgba(192, 132, 252, 0.5);
+    --social-bg: rgba(47, 48, 58, 0.5);
+    --shadow:
+      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+  }
+
+  #social .button-icon {
+    filter: invert(1) brightness(2);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: var(--body-color);
+}
+
+#root {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  border-inline: 1px solid var(--border);
+  min-height: 100svh;
+}
+#root:before {
+   content: '';
+    width: 22rem;
+    height: 12rem;
+    left: -8rem;
+    top: 0;
+    background: radial-gradient(circle, rgba(53, 95, 178, 0.58), transparent 60%);
+    position: fixed;
+}
+#root:after {
+    content: '';
+    width: 24rem;
+    height: 24rem;
+    right: -8rem;
+    top: 50%;
+    background: radial-gradient(circle, rgba(111, 201, 74, 0.34), transparent 60%);
+    position: fixed;
+    transform: translateY(-50%);
+}
+.ai-chatbot-section {
+  width: 220px;
+}
+.section_title {
+
+    & .title_bar:before {
+        content: '';
+       width: 28px;
+       height: 1px;
+       background: linear-gradient(120deg, var(--accent) 10%, #7dd3fc 55%, var(--accent-secondary) 100%);
+       display: block;
+    }
+}

@@ -1,0 +1,15 @@
+.about-section {
+
+    strong {
+        font-weight: normal;
+        color: #ffffff;
+    }
+}
+
+.my_information {
+    li {
+        .available {
+            color: #55ade8;
+        }
+    }
+} 
