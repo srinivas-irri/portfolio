@@ -87,21 +87,21 @@ const handleKeyDown = (e) => {
                             <React.Fragment key={index}>
                                 {msg.sender === "user" && (
                                     <div key={index} className="text-sm text-gray-300 user_response text-white mb-2 text-right flex gap-1 items-start justify-end">
-                                        <span className='bg-[linear-gradient(135deg,var(--blue),#4A7DD4)] rounded-[8px_8px_0px_8px] px-4 py-[8px] block w-fit float-right'>{msg.text}</span>
-                                        <div className='user_icon text-center content-center justify-start w-[30px] h-[22px]'><FaUser className='m-auto w-[13px] h-[13px]'/></div>
+                                        <span className='bg-[#48dfeb] text-[#194549] rounded-[8px_8px_0px_8px] px-2 py-[8px] block w-fit float-right'>{msg.text}</span>
+                                        <div className='user_icon text-center text-[#00eaff] content-center justify-start w-[30px] h-[22px]'><FaUser className='m-auto w-[13px] h-[13px]'/></div>
                                     </div>
                                 )}
                                 
                                 {loading && (
                                     <div className="text-sm text-gray-300 bot_response leading-6 mb-6 text-left flex gap-1 items-start justify-start">
                                         <div className='user_icon flex items-center text-center w-[30px] h-[30px] bot-icon'><BsStars className='m-auto w-[18px] h-[18px]' /></div>
-                                        <div className='text-sm text-gray-400 loading_chat'>Loading...</div>
+                                        <div className='text-sm text-gray-400  loading_chat'>Loading...</div>
                                     </div>
                                 )}
 
                                 {msg.sender === "bot" && (
                                     <div key={index} className="text-sm text-gray-300 bot_response leading-6 mb-3 text-left flex gap-3 items-start justify-start">
-                                        <div className='user_icon flex items-center text-center w-[30px] h-[30px] bot-icon'><BsStars className='m-auto w-[18px] h-[18px]' /></div>
+                                        <div className='user_icon flex items-center text-[#00eaff] text-center w-[30px] h-[30px] bot-icon'><BsStars className='m-auto w-[18px] h-[18px]' /></div>
                                         <div className='border-1 border-[#2a3b61] bg-[rgba(255,255,255,.06)] rounded-[8px_8px_8px_0px] px-4 py-2 break-words whitespace-pre-line text-left'>
                                             {msg.text.split("\n").map((line, index) => {
                                                     const urlRegex = /(https?:\/\/[^\s]+)/;
