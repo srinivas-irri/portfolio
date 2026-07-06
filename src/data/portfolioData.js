@@ -182,6 +182,7 @@ Strong problem-solving skills with extensive experience collaborating in <strong
       tech: ["Html5 & Css3", "Bootstrap", "Wordpress", "Javascript", "Jquery"]
     },
   ],
+  
 
   education: [
     {
@@ -213,5 +214,6 @@ Strong problem-solving skills with extensive experience collaborating in <strong
     {lang: "Oriya", value: "Proficiency"},
   ]
 };
+console.log(portfolioData.works);
 
 export default portfolioData;

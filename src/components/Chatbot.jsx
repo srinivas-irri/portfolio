@@ -64,10 +64,10 @@ const handleKeyDown = (e) => {
 
             {/* Chat panel */}
              {isShow && (
-                 <div className="fixed z-9999 bottom-[112px] right-10 border-1 rounded-2xl border-[rgba(255,255,255,0.2)] bg-[#111a2e] max-w-[380px] max-[640px]:right-6 max-[640px]:max-w-[328px] w-full chat-panel" id="chatPanel">
+                 <div className="fixed z-9999 bottom-[112px] right-10 border-1 rounded-2xl border-[rgba(255,255,255,0.2)] bg-[#0f2125] max-w-[380px] max-[640px]:right-6 max-[640px]:max-w-[328px] w-full chat-panel" id="chatPanel">
                     <div className="flex items-center justify-between py-2 px-4 border-b-1 border-[#263452] chat-head">
                         <div className="chat-head-title">
-                            <span className="text-white text-sm font-md chat-title-text">Srini AI Agent</span>
+                            <span className="text-[#00eaff] text-sm font-md chat-title-text">Srini AI Agent</span>
                         </div>
                         <button className="cursor-pointer chat-close-btn text-white" onClick={ handleClose }><IoCloseOutline /></button>
                     </div>
@@ -102,7 +102,32 @@ const handleKeyDown = (e) => {
                                 {msg.sender === "bot" && (
                                     <div key={index} className="text-sm text-gray-300 bot_response leading-6 mb-3 text-left flex gap-3 items-start justify-start">
                                         <div className='user_icon flex items-center text-center w-[30px] h-[30px] bot-icon'><BsStars className='m-auto w-[18px] h-[18px]' /></div>
-                                        <span className='border-1 border-[#2a3b61] bg-[rgba(255,255,255,.06)] rounded-[8px_8px_8px_0px] px-4 py-2 block fit-content' style={{ whiteSpace: "pre-wrap" }}>{msg.text}</span>
+                                        <div className='border-1 border-[#2a3b61] bg-[rgba(255,255,255,.06)] rounded-[8px_8px_8px_0px] px-4 py-2 break-words whitespace-pre-line text-left'>
+                                            {msg.text.split("\n").map((line, index) => {
+                                                    const urlRegex = /(https?:\/\/[^\s]+)/;
+
+                                                    if (urlRegex.test(line)) {
+                                                    const url = line.match(urlRegex)[0];
+
+                                                    return (
+                                                        <div key={index}>
+                                                        {line.replace(url, "")}
+
+                                                        <a
+                                                            href={url}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="block mt-1 text-sky-400 underline break-all hover:text-sky-300"
+                                                        >
+                                                            {url}
+                                                        </a>
+                                                        </div>
+                                                    );
+                                                    }
+
+                                                    return <div key={index}>{line}</div>;
+                                                })}
+                                        </div>
                                     </div>
                                 )}
                             </React.Fragment>
@@ -111,8 +136,8 @@ const handleKeyDown = (e) => {
                     </div>
                     
                     <div className="p-4 flex gap-3 items-center chat-input-row" id="chatInputRow">
-                        <textarea id="chatInput" placeholder="Ask about Srini…" ref={textareaRef} value={input} onChange={handleChange} onKeyDown={handleKeyDown} rows={1} className='w-full  max-h-[140px] border-1 border-[#263452] outline-none py-1.5 px-3 text-xs text-gray-400 resize-none overflow-hidden  focus:border-[#55ade8] rounded-[5px] ' ></textarea>
-                        <button className="bg-[#5b94e8] p-2 outline-none rounded-sm cursor-pointer transition-all duration-500 hover:bg-[#2a79ef] hover:transition-all chat-send" id="chatSend" onClick={() => {sendMessage(input);setInput("");}} ><IoSend className='text-white'/></button>
+                        <textarea id="chatInput" placeholder="Ask about Srini…" ref={textareaRef} value={input} onChange={handleChange} onKeyDown={handleKeyDown} rows={1} className='w-full  max-h-[140px] border-1 border-[#263452] outline-none py-1.5 px-3 text-xs text-gray-400 resize-none overflow-hidden  focus:border-[#63e2ed] rounded-[5px] ' ></textarea>
+                        <button className="bg-[#15e8fa] p-2 outline-none rounded-sm cursor-pointer transition-all duration-500 hover:transition-all chat-send" id="chatSend" onClick={() => {sendMessage(input);setInput("");}} ><IoSend className='text-[#0f2125]'/></button>
                     </div>
                  </div>
              )}

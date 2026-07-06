@@ -34,7 +34,7 @@ function Typewriter() {
   }, [text, isDeleting, wordIndex]);
 
   return (
-    <h2 className="text-[18px] text-[#3FD0C9] letter-spacing-[2px] font-semibold mb-0">
+    <h2 className="text-[18px] letter-spacing-[2px] font-semibold mb-0">
       {text}
       <span className="animate-pulse">|</span>
     </h2>

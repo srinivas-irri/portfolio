@@ -1,5 +1,6 @@
 import portfolioData from "../data/portfolioData";
 import ("../assets/styles/about.css");
+import { FaRegFilePdf } from "react-icons/fa";
 
 function About(props) {
 
@@ -9,7 +10,7 @@ function About(props) {
     <section id="about" className="py-20 px-6 max-[640px]:px-0">
       <div className="mb-6 section_title">
         <div className="flex gap-2 items-center mb-6">
-           <div className="title_bar"></div><div className="text-emerald-400 uppercase text-sm sub_title">{props.subTitle}</div>
+           <div className="title_bar"></div><div className="text-[#01eaf1] uppercase text-sm sub_title">{props.subTitle}</div>
         </div>
          <h2 className="text-3xl text-4xl text-left text-white font-medium">{props.title}</h2>
       </div>
@@ -22,7 +23,7 @@ function About(props) {
 
           <div className="flex items-center gap-3 sv-actions">
                 <a href={about.resumeLink} target="_blank" rel="noopener noreferrer"
-                className="px-4 py-2 border border-mist-500 rounded-4xl text-white cursor-pointer bg-olive-950 text-[14px] translate-y-[0] transition-all duration-500 hover:translate-y-[-4px] hover:shadow-[0_18px_30px_rgba(85,_173,_232,_0.22)] hover:transition-all hover:duration-500 resume-link">Download Resume</a>
+                className="px-4 py-2 flex gap-2 items-center border border-[#04454c] rounded-4xl text-[#01eaf1] cursor-pointer text-[14px] translate-y-[0] transition-all duration-500 bg-[#041b1e] hover:translate-y-[-6px] hover:transition-all hover:duration-[500] hover:shadow-[0_18px_30px_rgba(1,_234,_241,_0.22)] hover:transition-all hover:duration-500 resume-link"><FaRegFilePdf /> Download Resume</a>
           </div>
         </div>
 

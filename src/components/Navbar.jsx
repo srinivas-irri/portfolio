@@ -129,8 +129,8 @@ function Navbar({ darkMode, setDarkMode }) {
                                 offset={-80}
                                 smooth
                                 duration={500}
-                                activeClass="active-link text-[#fff]"
-                                className="cursor-pointer flex items-center gap-4 text-[#8ea0b8] text-[14px] py-2 font-[var(--primary-font)] transition-all duration-300 ease-in hover:text-white hover:transition-all hover:ease-in hover:duration-300">
+                                activeClass="active-link text-[#01eaf1]!"
+                                className="cursor-pointer flex items-center gap-4 text-[#8ea0b8] text-[14px] py-2 font-[var(--primary-font)] transition-all duration-300 ease-in hover:text-[#01eaf1] hover:transition-all hover:ease-in hover:duration-300">
                                 {index} 
                                 <span className="w-[20px] h-[2px] bg-[rgba(255,_255,_255,_0.5)] inline transition-all duration-300 ease-in s-bar"></span> 
                                 {item.name}
@@ -149,7 +149,7 @@ function Navbar({ darkMode, setDarkMode }) {
                 </div>
 
                 <div className="px-4 social-info">
-                    <ul className="flex gap-3 text-gray items-center text-emerald-400">
+                    <ul className="flex gap-3 text-gray items-center text-[#01eaf1]">
                         <li><a href="https://www.linkedin.com/feed/" target="_blank">IN</a></li>
                         <li><a href="">@</a></li>
                         <li><a href=""><CiGlobe /></a></li>

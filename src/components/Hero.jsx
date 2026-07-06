@@ -2,6 +2,8 @@ import portfolioData from "../data/portfolioData";
 import Typewriter from "./Typewriter";
 import "../assets/styles/hero.css";
 import { Link } from "react-scroll";
+import { FaRegHeart } from "react-icons/fa6";
+import { GrProjects } from "react-icons/gr";
 
 function Hero() {
   const { personalInfo } = portfolioData;
@@ -26,10 +28,10 @@ function Hero() {
 
     <div className="flex flex-col gap-4 user_info_section">
       <div className="max-w-xl text-white flex gap-3 items-center before:[''] before:block before:w-[28px] before:h-[2px] before:bg-[linear-gradient(120deg,_var(--accent)_10%,_#7dd3fc_55%,_var(--accent-secondary)_100%)] before:flex-shrink-[0] before:rounded-[2px] sub-title">
-        <p className="text-['JetBrains Mono',monospace] items-center gap-[0.65rem] text-[#55ade8] letter-spacing-[0.1em] text-[0.8rem] font-[500] flex">{personalInfo.subtitle}</p>
+        <p className="text-['JetBrains Mono',monospace] items-center gap-[0.65rem] text-[#00eaff] letter-spacing-[0.1em] text-[0.9rem] flex">{personalInfo.subtitle}</p>
       </div>
       <div className="max-w-xl text-white main-title">
-         <h1 className="text-5xl font-bold text-[var(--secondary-font)] text-[80px] bg-[linear-gradient(120deg,_var(--accent)_10%,_#7dd3fc_20%,_var(--accent-secondary)_100%)] m-[0] max-[640px]:text-[52px]">{personalInfo.name}</h1>
+         <h1 className="text-5xl font-bold text-[var(--secondary-font)] text-[80px] bg-[linear-gradient(120deg,_var(--accent)_20%,_#7dd3fc_30%,_var(--accent-secondary)_100%)] m-[0] max-[640px]:text-[52px]">{personalInfo.name}</h1>
       </div>
       <div className="max-w-xl text-white flex items-center gap-3 desgn-info">
           &#60; <Typewriter /> /&#62;
@@ -43,10 +45,10 @@ function Hero() {
       className="px-4 py-2 border border-mist-500 rounded-4xl text-white bg-olive-950 resume-link">Download Resume</a> */}
 
       <Link to="contact" smooth={true} duration={500}
-        className="px-4 py-2 border border-mist-500 rounded-4xl text-white cursor-pointer bg-olive-950 text-[14px] translate-y-[0] transition-all duration-500 hover:translate-y-[-6px] hover:transition-all hover:duration-[500] hover:shadow-[0_18px_30px_rgba(85,_173,_232,_0.22)] hover:transition-all hover:duration-500 resume-link">Let's Connect
+        className="px-4 py-2 flex gap-2 items-center border border-[#04454c] rounded-4xl text-[#01eaf1] cursor-pointer text-[14px] translate-y-[0] transition-all duration-500 bg-[#041b1e] hover:translate-y-[-6px] hover:transition-all hover:duration-[500] hover:shadow-[0_18px_30px_rgba(1,_234,_241,_0.22)] hover:transition-all hover:duration-500 resume-link"><FaRegHeart /> Let's Connect
       </Link>
       <Link to="projects" smooth={true} duration={500}
-        className="px-4 py-2 border border-mist-500 rounded-4xl text-black cursor-pointer bg-olive-950 text-[14px] bg-[linear-gradient(135deg,_var(--accent-primary)_0%,_var(--accent-secondary)_100%)] translate-y-[0] transition-all duration-500 hover:translate-y-[-6px] hover:transition-all hover:duration-500 hover:shadow-[0_18px_30px_rgba(85,_173,_232,_0.22)] hover:transition-all hover:duration-500 view-work">View Work
+        className="px-4 py-2 flex gap-2 items-center border border-[#04454c] rounded-4xl text-[#01eaf1] cursor-pointer text-[14px] translate-y-[0] transition-all duration-500 bg-[#041b1e] hover:translate-y-[-6px] hover:transition-all hover:duration-[500] hover:shadow-[0_18px_30px_rgba(1,_234,_241,_0.22)] hover:transition-all hover:duration-500 view-work"><GrProjects /> View Work
       </Link>
       </div>
     </div>
