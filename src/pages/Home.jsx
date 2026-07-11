@@ -8,6 +8,7 @@ import Footer from "../components/Footer";
 import Experience from "../components/Experience";
 import Background from "../components/Background";
 import Chatbot from "../components/Chatbot";
+import VoiceAssistant from "../components/VoiceAssistant";
 
 
 function Home({ darkMode, setDarkMode }) {
@@ -27,6 +28,10 @@ function Home({ darkMode, setDarkMode }) {
           <Background title= "Education & languages" subTitle="Background" />
           <Contact title= "Let's build something remarkable." subTitle="Contact" />
           <Footer />
+      </div>
+      
+      <div className="ai-chatbot-section flex-1">
+         <VoiceAssistant />
       </div>
 
       <div className="ai-chatbot-section flex-1">

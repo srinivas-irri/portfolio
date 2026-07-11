@@ -214,6 +214,6 @@ Strong problem-solving skills with extensive experience collaborating in <strong
     {lang: "Oriya", value: "Proficiency"},
   ]
 };
-console.log(portfolioData.works);
+
 
 export default portfolioData;

@@ -1,4 +1,5 @@
 import portfolioData from "../data/portfolioData";
+import { scrollToSection } from "../utils/scrollToSection";
 import Typewriter from "./Typewriter";
 import "../assets/styles/hero.css";
 import { Link } from "react-scroll";
@@ -44,12 +45,12 @@ function Hero() {
       {/* <a href={personalInfo.resumeLink} target="_blank" rel="noopener noreferrer"
       className="px-4 py-2 border border-mist-500 rounded-4xl text-white bg-olive-950 resume-link">Download Resume</a> */}
 
-      <Link to="contact" smooth={true} duration={500}
+      <div onClick={() => scrollToSection("contact")}
         className="px-4 py-2 flex gap-2 items-center border border-[#04454c] rounded-4xl text-[#01eaf1] cursor-pointer text-[14px] translate-y-[0] transition-all duration-500 bg-[#041b1e] hover:translate-y-[-6px] hover:transition-all hover:duration-[500] hover:shadow-[0_18px_30px_rgba(1,_234,_241,_0.22)] hover:transition-all hover:duration-500 resume-link"><FaRegHeart /> Let's Connect
-      </Link>
-      <Link to="projects" smooth={true} duration={500}
+      </div>
+      <div onClick={() => scrollToSection("projects")}
         className="px-4 py-2 flex gap-2 items-center border border-[#04454c] rounded-4xl text-[#01eaf1] cursor-pointer text-[14px] translate-y-[0] transition-all duration-500 bg-[#041b1e] hover:translate-y-[-6px] hover:transition-all hover:duration-[500] hover:shadow-[0_18px_30px_rgba(1,_234,_241,_0.22)] hover:transition-all hover:duration-500 view-work"><GrProjects /> View Work
-      </Link>
+      </div>
       </div>
     </div>
     </section>

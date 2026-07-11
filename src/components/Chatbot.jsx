@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import {GiVintageRobot, IoCloseOutline, FaUser, IoSend, BsStars} from '../icons/reactIcons';
+import {GiVintageRobot, IoCloseOutline, FaUser, IoSend, BsStars, SiChatbot} from '../icons/reactIcons';
 
 import useChat from '../hooks/useChat';
 import { Fragment } from "react";
@@ -58,13 +58,13 @@ const handleKeyDown = (e) => {
                <div className="fixed top-0 left-0 z-98 bg-[rgba(0,_0,_0,_0.7)] w-full h-full min-[360px]:block min-[1024px]:hidden overlay"></div>
             )}
 
-            <button className="fixed z-9999 bottom-[40px] right-10 rounded-4xl px-6 py-3 flex gap-1 items-center text-md font-lg text-white text-md cursor-pointer bg-[linear-gradient(135deg,#5B8DEF_0%,#3FD0C9_100%)] shadow-[0_4px_24px_rgba(91,141,239,.6)] transition-all duration-400 hover:-translate-y-1 hover:transition-all duration-400 max-[767px]:px-2 max-[767px]:rounded-[6px] max-[640px]:right-6 chat-fab" id="chatFab" title="Srini Portfolio Chatbot" onClick={()=> setIsShow(!isShow)}>
-                <GiVintageRobot className='w-[26px] h-[26] max-[767px]:w-[28px] h-[28px]'/> <span className="fab-label max-[767px]:hidden">Ask Srini</span>
+            <button className="fixed z-9999 bottom-[40px] right-10 rounded-md px-3 py-2 flex gap-1 items-center text-md font-lg text-white text-md cursor-pointer bg-[linear-gradient(135deg,#5B8DEF_0%,#3FD0C9_100%)] shadow-[0_4px_24px_rgba(91,141,239,.6)] transition-all duration-400 hover:-translate-y-1 hover:transition-all duration-400 max-[767px]:px-2 max-[767px]:rounded-[6px] max-[640px]:right-6 chat-fab" id="chatFab" title="Srini Portfolio Chatbot" onClick={()=> setIsShow(!isShow)}>
+                <SiChatbot className='w-[22px] h-[22] max-[767px]:w-[28px] h-[28px]'/>
             </button>
 
             {/* Chat panel */}
              {isShow && (
-                 <div className="fixed z-9999 bottom-[112px] right-10 border-1 rounded-2xl border-[rgba(255,255,255,0.2)] bg-[#0f2125] max-w-[380px] max-[640px]:right-6 max-[640px]:max-w-[328px] w-full chat-panel" id="chatPanel">
+                 <div className="fixed z-9999 bottom-[112px] right-10 border-1 rounded-2xl border-[rgba(255,255,255,0.2)] bg-[#0f2125] max-w-[380px] max-[640px]:right-6 max-[640px]:max-w-[328px] max-[640px]:bottom-[100px] max-[640px]:z-[99999] w-full chat-panel" id="chatPanel">
                     <div className="flex items-center justify-between py-2 px-4 border-b-1 border-[#263452] chat-head">
                         <div className="chat-head-title">
                             <span className="text-[#00eaff] text-sm font-md chat-title-text">Srini AI Agent</span>
