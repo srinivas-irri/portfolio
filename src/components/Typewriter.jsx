@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 const words = [
   "Frontend Developer",
-  "User Interface Designer",
+  "Sr. User Interface Developer",
 ];
 
 function Typewriter() {

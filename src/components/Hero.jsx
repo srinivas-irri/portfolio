@@ -34,7 +34,7 @@ function Hero() {
       <div className="max-w-xl text-white main-title">
          <h1 className="text-5xl font-bold text-[var(--secondary-font)] text-[80px] bg-[linear-gradient(120deg,_var(--accent)_20%,_#7dd3fc_30%,_var(--accent-secondary)_100%)] m-[0] max-[640px]:text-[52px]">{personalInfo.name}</h1>
       </div>
-      <div className="max-w-xl text-white flex items-center gap-3 desgn-info">
+      <div className="max-w-xl text-white flex items-center gap-1 desgn-info">
           &#60; <Typewriter /> /&#62;
       </div>
       <div className="text-gray pb-4 pt-4 leading-7 w-10/12 description max-[768px]:w-12/12">

@@ -3,7 +3,7 @@ const portfolioData = {
     name: "Srinivas Irri",
     jobTitle: "Fronted Developer | Sr UI Developer",
     subtitle: "Open to new ideas & building things",
-    description: "Senior UI Developer with 14+ years of experience in building responsive and scalable web applications using HTML5, CSS3, SCSS, JavaScript, TypeScript, Bootstrap, Angular, and React. Experienced in developing reusable components, integrating REST APIs, and delivering high-performance user interfaces. Proficient in leveraging AI-powered tools such as ChatGPT, Windsurf, Cursor and GitHub Copilot to accelerate development, optimize code quality, and enhance productivity in Agile environments.",
+    description: "Senior UI Developer with 14+ years and including 2+ years of experience in Angular and React Frontend Development. Building responsive and scalable web applications using HTML5, CSS3, SCSS, JavaScript, TypeScript, Bootstrap, Angular, and React. Experienced in developing reusable components, integrating REST APIs, and delivering high-performance user interfaces. Proficient in leveraging AI-powered tools such as ChatGPT, Windsurf, Cursor and GitHub Copilot to accelerate development, optimize code quality, and enhance productivity in Agile environments.",
     profileImage: "/assets/profile.png",
     resumeLink: "/resume.pdf",
     email: "nishaant369@gmail.com",
@@ -13,9 +13,9 @@ const portfolioData = {
 
  about: {
     description: [
-    `Senior UI Developer with <strong>14+ years of professional experience</strong> in frontend development, specializing in creating <strong>high-performance, responsive, and accessible web applications</strong>.
+    `Senior UI Developer with <strong>14+ years of professional experience</strong> in User Interface and including <strong>2+ years of experience</strong> in Angular and React Development. Specializing in creating <strong>high-performance, responsive, and accessible web applications</strong>.
 
-Proficient in <strong>HTML5, CSS3, SCSS, JavaScript (ES6+), TypeScript, Bootstrap, Tailwind CSS, Angular, and React</strong>.`,
+Proficient in <strong>HTML5, CSS3, SCSS, JavaScript (ES6+), Jquery, TypeScript, Bootstrap, Tailwind CSS, Foundation CSS, Angular, and React</strong>.`,
 
     `Hands-on experience in developing <strong>reusable components, routing, forms, state management, REST API integration, authentication, and responsive UI architectures</strong>.
 
