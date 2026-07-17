@@ -1,5 +1,4 @@
 import { useState, useRef } from "react";
-import { askGemini } from "../services/gemini";
 
 export default function useChat() {
 
