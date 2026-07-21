@@ -9,7 +9,7 @@ function Projects(props) {
   const { works } = portfolioData;
 
   return (
-    <section id="projects" className="py-20 px-6 max-[640px]:px-0">
+    <section id="works" className="py-20 px-6 max-[640px]:px-0">
       
       <div className="mb-8 section_title">
         <div className="flex gap-2 items-center mb-6">

@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { executeAction } from "../utils/portfolioActions";
 
 export default function useChat() {
 
@@ -22,6 +23,7 @@ export default function useChat() {
 
         if (!question.trim()) return;
 
+        // Add user message
         setMessages(prev => [
             ...prev,
             {
@@ -34,7 +36,6 @@ export default function useChat() {
 
         try {
 
-            // const reply = await askGemini(question);
             const response = await fetch("http://localhost:5000/api/chat", {
                 method: "POST",
                 headers: {
@@ -46,8 +47,31 @@ export default function useChat() {
             });
 
             const data = await response.json();
-            const reply = data.data.reply;
 
+            let reply = "";
+            let action = null;
+
+            // Manual AI Response
+            if (data.source === "manual") {
+
+                reply = data.data.reply;
+                action = data.data.action;
+
+            }
+            // Gemini Response
+            else if (data.source === "gemini") {
+
+                reply = data.reply;
+
+            }
+            // Fallback
+            else {
+
+                reply = "Sorry, I couldn't understand your request.";
+
+            }
+
+            // Add bot message
             setMessages(prev => [
                 ...prev,
                 {
@@ -56,33 +80,50 @@ export default function useChat() {
                 }
             ]);
 
+            // Execute frontend action (scroll, resume, etc.)
+            console.log("Backend Response:", data);
+            console.log("Action:", action);
+          
+            if (action) {
+                setTimeout(() => {
+                    executeAction(action);
+                }, 100);
+            }
+
         } catch (err) {
+
+            console.error("Chat Error:", err);
 
             setMessages(prev => [
                 ...prev,
                 {
                     sender: "bot",
-                    text: "Something went wrong."
+                    text: "Sorry, something went wrong. Please try again."
                 }
             ]);
 
         } finally {
 
             setLoading(false);
-
             setInput("");
 
             if (textareaRef.current) {
                 textareaRef.current.style.height = "auto";
             }
+
         }
+
     };
 
-    // Clear everything
+    // Clear chat
     const clearChat = () => {
         setMessages([]);
         setWelcomeMessage(true);
         setInput("");
+
+        if (textareaRef.current) {
+            textareaRef.current.style.height = "auto";
+        }
     };
 
     return {

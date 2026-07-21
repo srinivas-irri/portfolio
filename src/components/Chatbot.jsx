@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { GiVintageRobot, IoCloseOutline, FaUser, IoSend, BsStars, SiChatbot } from '../icons/reactIcons';
 
 import useChat from '../hooks/useChat';
@@ -13,6 +13,9 @@ export default function Chatbot() {
 
     // Textarea auto resizer
     const textareaRef = useRef(null);
+
+    // Scroll to bottom
+    const bottomRef = useRef(null);
 
     const handleClose = () => {
         clearChat();
@@ -51,6 +54,11 @@ export default function Chatbot() {
         }
     };
 
+    useEffect(() => {
+    bottomRef.current?.scrollIntoView({
+        behavior: "smooth",
+    });
+}, [messages, loading]);
 
     return (
         <div className='relative h-full'>
@@ -139,12 +147,12 @@ export default function Chatbot() {
                     </div>
 
                     <div className="p-4 flex gap-3 items-center chat-input-row" id="chatInputRow">
-                        <textarea id="chatInput" placeholder="Ask about Srini…" ref={textareaRef} value={input} onChange={handleChange} onKeyDown={handleKeyDown} rows={1} className='w-full  max-h-[140px] border-1 border-[#263452] outline-none py-1.5 px-3 text-xs text-gray-400 resize-none overflow-hidden  focus:border-[#63e2ed] rounded-[5px] ' ></textarea>
-                        <button className="bg-[#15e8fa] p-2 outline-none rounded-sm cursor-pointer transition-all duration-500 hover:transition-all chat-send" id="chatSend" onClick={handleSubmit} ><IoSend className='text-[#0f2125]' /></button>
+                        <textarea id="chatInput" placeholder="Ask about Srini…" ref={textareaRef.current?.focus()} value={input} onChange={handleChange} disabled={loading} onKeyDown={handleKeyDown} rows={1} className='w-full  max-h-[140px] border-1 border-[#263452] outline-none py-1.5 px-3 text-xs text-gray-400 resize-none overflow-hidden  focus:border-[#63e2ed] rounded-[5px] ' ></textarea>
+                        <button className={`bg-[#15e8fa] p-2 outline-none rounded-sm cursor-pointer transition-all duration-500 hover:transition-all chat-send ${loading ? 'opacity-[0.7] pointer-events-none' : ''}`} id="chatSend"  onClick={handleSubmit} ><IoSend className='text-[#0f2125]' /></button>
                     </div>
                 </div>
             )}
-
+           <div ref={bottomRef}></div>
         </div>
     )
 }

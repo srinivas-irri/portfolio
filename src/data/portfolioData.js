@@ -6,9 +6,9 @@ const portfolioData = {
     description: "Senior UI Developer with 14+ years and including 2+ years of experience in Angular and React Frontend Development. Building responsive and scalable web applications using HTML5, CSS3, SCSS, JavaScript, TypeScript, Bootstrap, Angular, and React. Experienced in developing reusable components, integrating REST APIs, and delivering high-performance user interfaces. Proficient in leveraging AI-powered tools such as ChatGPT, Windsurf, Cursor and GitHub Copilot to accelerate development, optimize code quality, and enhance productivity in Agile environments.",
     profileImage: "/assets/profile.png",
     resumeLink: "/resume.pdf",
-    email: "nishaant369@gmail.com",
+    email: "srinuvas.irri@gmail.com",
     github: "https://github.com/your-github",
-    linkedin: "https://linkedin.com/in/your-linkedin"
+    linkedin: "https://www.linkedin.com/in/srinivas-irri-36824337/"
   },
 
  about: {
@@ -187,22 +187,22 @@ Strong problem-solving skills with extensive experience collaborating in <strong
   education: [
     {
       course: "Bachelor of Arts (BA)",
-      collage: "Sri Krishnadevaraya University, Anantapur",
+      college: "Sri Krishnadevaraya University, Anantapur",
       // year: { from: "2020", to: "2024" },
     },
     {
       course: "Secondary School Certificate (SSC)",
-      collage: "National Institute of Open Schooling, New Delhi",
+      college: "National Institute of Open Schooling, New Delhi",
       // year: { from: "2020", to: "2024" },
     },
     {
       course: "ITI (Electrical)",
-      collage: "Kalinga Institute of Industrial Technology, Bhubaneswar",
+      college: "Kalinga Institute of Industrial Technology, Bhubaneswar",
       // year: { from: "2020", to: "2024" },
     },
     {
       course: "Higher Secondary Certificate (HSC)",
-      collage: "Board of Secondary Education, Odisha",
+      college: "Board of Secondary Education, Odisha",
       // year: { from: "2020", to: "2024" },
     },
   ],

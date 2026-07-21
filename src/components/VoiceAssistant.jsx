@@ -2,8 +2,10 @@ import { useEffect } from "react";
 import { BsFillMicFill } from "react-icons/bs";
 import { BsFillMicMuteFill } from "react-icons/bs";
 import useVoice from "../hooks/useVoice";
-import { detectIntent } from "../services/geminiIntent";
-import { scrollToSection } from "../utils/scrollToSection";
+// import { detectIntent } from "../services/geminiIntent";
+// import { scrollToSection } from "../utils/scrollToSection";
+import { executeAction } from "../utils/portfolioActions";
+import { speak } from "../utils/speak";
 import ('../assets/styles/voiceassistant.css')
 
 export default function VoiceAssistant() {
@@ -15,18 +17,69 @@ export default function VoiceAssistant() {
 
     } = useVoice();
 
-   useEffect(() => {
+useEffect(() => {
 
     if (!transcript) return;
 
     async function processVoice() {
 
-        const intent = await detectIntent(transcript);
+        try {
 
-        console.log(intent);
+            const response = await fetch("http://localhost:5000/api/chat", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    message: transcript,
+                    mode: "voice"
+                })
 
-        if (intent !== "unknown") {
-            scrollToSection(intent);
+            });
+
+            const data = await response.json();
+           
+            console.log("Backend Response:", data);
+
+            let reply = "";
+            let speakText = "";
+            let action = null;
+
+            // Manual AI
+            if (data.source === "manual") {
+
+                if (!data.data) {
+                    throw new Error("Manual response is empty");
+                }
+
+                reply = data.data.reply;
+                action = data.data.action;
+            }
+
+            // Gemini
+            else {
+
+                reply = data.reply;
+                action = data.action;
+
+            }
+
+            if (action) {
+
+                executeAction(action);
+
+            }
+
+            speak(reply);
+
+        }
+
+        catch (err) {
+
+            console.log(err);
+
+            speak("Sorry. I couldn't process your request.");
+
         }
 
     }

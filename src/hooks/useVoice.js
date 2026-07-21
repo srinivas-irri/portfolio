@@ -83,8 +83,14 @@ export default function useVoice() {
     };
 
     const stopListening = () => {
-        shouldKeepListening.current = false;
+         shouldKeepListening.current = false;
+
+    if (recognitionRef.current) {
         recognitionRef.current.stop();
+    }
+
+    // Stop AI voice immediately
+    window.speechSynthesis.cancel();
     };
 
     const toggleListening = () => {

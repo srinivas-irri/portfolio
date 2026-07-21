@@ -29,7 +29,7 @@ const lastWord = words.pop();
           improve code quality, streamline debugging, and deliver production-ready applications faster.</p>
         <ul className="flex gap-3 justify-center pt-10">
           <li className="transitionall duration-400 hover:-translate-y-2"><a href="" className="flex gap-2 items-center text-[#01eaf1] text-sm bg-[#041b1e] border-1 border-[#04454c] rounded-sm font-sm py-2 px-3 -transitionall duration-400"><TbMailShare /> srinuvas.irri@gmail.com</a></li>
-          <li className="transitionall duration-400 hover:-translate-y-2"><a href="https://www.linkedin.com/feed/" target="_blank" className="flex gap-2 items-center text-[#01eaf1] text-sm border-1 border-[#04454c] rounded-md bg-[#041b1e] font-sm py-2 px-3 -transitionall duration-400"><FaLinkedinIn /> LinkedIn <GoArrowUpRight /></a></li>
+          <li className="transitionall duration-400 hover:-translate-y-2"><a href="https://www.linkedin.com/in/srinivas-irri-36824337/" target="_blank" className="flex gap-2 items-center text-[#01eaf1] text-sm border-1 border-[#04454c] rounded-md bg-[#041b1e] font-sm py-2 px-3 -transitionall duration-400"><FaLinkedinIn /> LinkedIn <GoArrowUpRight /></a></li>
         </ul>
       </div>
     </section>

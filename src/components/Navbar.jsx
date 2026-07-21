@@ -17,7 +17,7 @@ function Navbar({ darkMode, setDarkMode }) {
         { name: "Home", to: "hero" },
         { name: "About", to: "about" },
         { name: "Experience", to: "experience" },
-        { name: "Projects", to: "projects" },
+        { name: "Projects", to: "works" },
         { name: "Skills", to: "skills" },
         { name: "Background", to: "background" },
         { name: "Contact", to: "contact" },

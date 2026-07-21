@@ -1,15 +1,29 @@
 export const scrollToSection = (id) => {
 
-    const element = document.getElementById(id);
+    const scroll = () => {
 
-    if (!element) {
-        console.warn(`Section '${id}' not found`);
-        return;
+        const element = document.getElementById(id);
+
+        console.log("Scrolling to:", id, element);
+
+        if (element) {
+
+            element.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+            });
+
+            return true;
+        }
+
+        return false;
+    };
+
+    // Try immediately
+    if (!scroll()) {
+
+        // Retry after React finishes rendering
+        setTimeout(scroll, 150);
+
     }
-
-    element.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-    });
-
 };

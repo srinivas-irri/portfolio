@@ -29,7 +29,7 @@ export default function Background(props) {
                      {education.map((educate, index) => (
                      <div className='text-left pl-10 pb-6 relative before:w-3 before:h-3 before:z-9 before:bg-[#00eaff] before:absolute before:left-[3px] before:top-1.5 after:w-0.5 after:h-full after:bg-[#04454c] after:absolute after:left-[9px] after:top-2 last:after:h-0 main-education-container' key={index}>
                         <div className='text-white font-medium text-md mb-1'>{educate.course}</div>
-                        <div className='text-gray-400 text-sm'>{educate.collage}</div>
+                        <div className='text-gray-400 text-sm'>{educate.college}</div>
                      </div>
                   ))}
                   </div>
