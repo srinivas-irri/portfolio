@@ -6,6 +6,7 @@ import useVoice from "../hooks/useVoice";
 // import { scrollToSection } from "../utils/scrollToSection";
 import { executeAction } from "../utils/portfolioActions";
 import { speak } from "../utils/speak";
+import API_URL from "../config/api";
 import ('../assets/styles/voiceassistant.css')
 
 export default function VoiceAssistant() {
@@ -25,16 +26,15 @@ useEffect(() => {
 
         try {
 
-            const response = await fetch("http://localhost:5000/api/chat", {
+            const response = await fetch(`${API_URL}/api/chat`, {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/json"
+                    "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
                     message: transcript,
                     mode: "voice"
-                })
-
+                }),
             });
 
             const data = await response.json();

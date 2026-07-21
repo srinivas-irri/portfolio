@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { executeAction } from "../utils/portfolioActions";
+import API_URL from "../config/api";
 
 export default function useChat() {
 
@@ -36,7 +37,7 @@ export default function useChat() {
 
         try {
 
-            const response = await fetch("http://localhost:5000/api/chat", {
+            const response = await fetch(`${API_URL}/api/chat`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
