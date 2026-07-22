@@ -3,7 +3,7 @@ const portfolioData = {
     name: "Srinivas Irri",
     jobTitle: "Fronted Developer | Sr UI Developer",
     subtitle: "Open to new ideas & building things",
-    description: "Senior UI Developer with 14+ years and including 2+ years of experience in Angular and React Frontend Development. Building responsive and scalable web applications using HTML5, CSS3, SCSS, JavaScript, TypeScript, Bootstrap, Angular, and React. Experienced in developing reusable components, integrating REST APIs, and delivering high-performance user interfaces. Proficient in leveraging AI-powered tools such as ChatGPT, Windsurf, Cursor and GitHub Copilot to accelerate development, optimize code quality, and enhance productivity in Agile environments.",
+    description: "Senior UI Developer with 14+ years of overall experience in Frontend Development, including 5+ years of experience in Angular and 2+ years of experience in React. Skilled in building responsive, scalable, and high-performance web applications using HTML5, CSS3, SCSS, JavaScript (ES6+), TypeScript, Bootstrap, Angular, and React. Experienced in developing reusable UI components, integrating REST APIs, optimizing application performance, and delivering user-centric solutions in Agile environments. Proficient in leveraging AI-powered development tools such as ChatGPT, Windsurf, Cursor, and GitHub Copilot to accelerate development, improve code quality, automate repetitive tasks, and enhance overall productivity.",
     profileImage: "/assets/profile.png",
     resumeLink: "/resume.pdf",
     email: "srinuvas.irri@gmail.com",
@@ -13,16 +13,16 @@ const portfolioData = {
 
  about: {
     description: [
-    `Senior UI Developer with <strong>14+ years of professional experience</strong> in User Interface and including <strong>2+ years of experience</strong> in Angular and React Development. Specializing in creating <strong>high-performance, responsive, and accessible web applications</strong>.
+  `Senior UI Developer with <strong>14+ years of professional experience</strong> in Frontend Development, including <strong>5+ years of experience in Angular</strong> and <strong>2+ years of experience in React Development</strong>. Specializing in building <strong>high-performance, responsive, scalable, and accessible web applications</strong>.
 
-Proficient in <strong>HTML5, CSS3, SCSS, JavaScript (ES6+), Jquery, TypeScript, Bootstrap, Tailwind CSS, Foundation CSS, Angular, and React</strong>.`,
+Proficient in <strong>HTML5, CSS3, SCSS, JavaScript (ES6+), jQuery, TypeScript, Bootstrap, Tailwind CSS, Foundation CSS, Angular, and React</strong>.`,
 
-    `Hands-on experience in developing <strong>reusable components, routing, forms, state management, REST API integration, authentication, and responsive UI architectures</strong>.
+  `Hands-on experience in developing <strong>reusable UI components, routing, reactive forms, state management, REST API integration, authentication, and responsive application architectures</strong>.
 
-Experienced in utilizing <strong>ChatGPT, GitHub Copilot, and modern AI coding platforms</strong> for code generation, refactoring, debugging, documentation, and UI prototyping.
+Experienced in utilizing <strong>ChatGPT, Windsurf, Cursor, GitHub Copilot, and modern AI-powered development tools</strong> for code generation, refactoring, debugging, documentation, UI prototyping, and improving development productivity.
 
-Strong problem-solving skills with extensive experience collaborating in <strong>Agile/Scrum teams</strong> to deliver reliable and user-focused applications.`
-  ],
+Strong problem-solving skills with extensive experience collaborating in <strong>Agile/Scrum teams</strong> to deliver reliable, scalable, and user-focused applications.`
+],
   
     cards: [
       {
