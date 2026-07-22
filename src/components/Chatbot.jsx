@@ -9,6 +9,7 @@ export default function Chatbot() {
 
     const [isShow, setIsShow] = useState(false);
     const { messages, input, setInput, loading, sendMessage, welcomMessage, clearChat } = useChat();
+    const messagesRef = useRef(null);
 
 
     // Textarea auto resizer
@@ -55,10 +56,13 @@ export default function Chatbot() {
     };
 
     useEffect(() => {
-    bottomRef.current?.scrollIntoView({
-        behavior: "smooth",
-    });
-}, [messages, loading]);
+        if (isShow) {
+            bottomRef.current?.scrollIntoView({
+                behavior: "smooth",
+            });
+        }
+    }, [messages, loading, isShow]);
+
 
     return (
         <div className='relative h-full'>
@@ -81,7 +85,7 @@ export default function Chatbot() {
                     </div>
 
                     {/* <div className="min-h-[450px] h-full chat-msgs" id="chatMsgs"></div> */}
-                    <div className="overflow-auto min-h-[300px] max-h-[420px] chat-msgs px-3 pt-4 mt-3 messages flex flex-1 flex-col gap-4">
+                    <div className="overflow-auto min-h-[300px] max-h-[420px] chat-msgs px-3 pt-4 mt-3 messages flex flex-1 flex-col gap-4" ref={messagesRef}>
                         {welcomMessage && (
                             <div className='text-center text-white w-11/12 m-auto welcome_msg'>
                                 <div className='text-[#a7c1fb] m-auto block mb-3 w-[40px] text-[40px] agent-icon'><GiVintageRobot /></div>
@@ -147,7 +151,7 @@ export default function Chatbot() {
                     </div>
 
                     <div className="p-4 flex gap-3 items-center chat-input-row" id="chatInputRow">
-                        <textarea id="chatInput" placeholder="Ask about Srini…" ref={textareaRef.current?.focus()} value={input} onChange={handleChange} disabled={loading} onKeyDown={handleKeyDown} rows={1} className='w-full  max-h-[140px] border-1 border-[#263452] outline-none py-1.5 px-3 text-xs text-gray-400 resize-none overflow-hidden  focus:border-[#63e2ed] rounded-[5px] ' ></textarea>
+                        <textarea id="chatInput" placeholder="Ask about Srini…" ref={textareaRef} value={input} onChange={handleChange} disabled={loading} onKeyDown={handleKeyDown} rows={1} className='w-full  max-h-[140px] border-1 border-[#263452] outline-none py-1.5 px-3 text-xs text-gray-400 resize-none overflow-hidden  focus:border-[#63e2ed] rounded-[5px] ' ></textarea>
                         <button className={`bg-[#15e8fa] p-2 outline-none rounded-sm cursor-pointer transition-all duration-500 hover:transition-all chat-send ${loading ? 'opacity-[0.7] pointer-events-none' : ''}`} id="chatSend"  onClick={handleSubmit} ><IoSend className='text-[#0f2125]' /></button>
                     </div>
                 </div>
