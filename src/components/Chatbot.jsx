@@ -15,9 +15,6 @@ export default function Chatbot() {
     // Textarea auto resizer
     const textareaRef = useRef(null);
 
-    // Scroll to bottom
-    const bottomRef = useRef(null);
-
     const handleClose = () => {
         clearChat();
         setIsShow(false);
@@ -55,13 +52,15 @@ export default function Chatbot() {
         }
     };
 
-    useEffect(() => {
-        if (isShow) {
-            bottomRef.current?.scrollIntoView({
-                behavior: "smooth",
-            });
-        }
-    }, [messages, loading, isShow]);
+   useEffect(() => {
+    if (isShow && messagesRef.current) {
+        textareaRef.current?.focus();
+        messagesRef.current.scrollTo({
+            top: messagesRef.current.scrollHeight,
+            behavior: "smooth",
+        });
+    }
+}, [messages, loading, isShow]);
 
 
     return (
@@ -85,7 +84,7 @@ export default function Chatbot() {
                     </div>
 
                     {/* <div className="min-h-[450px] h-full chat-msgs" id="chatMsgs"></div> */}
-                    <div className="overflow-auto min-h-[300px] max-h-[420px] chat-msgs px-3 pt-4 mt-3 messages flex flex-1 flex-col gap-4" ref={messagesRef}>
+                    <div ref={messagesRef} className="overflow-auto min-h-[300px] max-h-[420px] chat-msgs px-3 pt-4 mt-3 messages flex flex-1 flex-col gap-4">
                         {welcomMessage && (
                             <div className='text-center text-white w-11/12 m-auto welcome_msg'>
                                 <div className='text-[#a7c1fb] m-auto block mb-3 w-[40px] text-[40px] agent-icon'><GiVintageRobot /></div>
@@ -156,7 +155,7 @@ export default function Chatbot() {
                     </div>
                 </div>
             )}
-           <div ref={bottomRef}></div>
+          
         </div>
     )
 }

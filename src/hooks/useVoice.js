@@ -1,48 +1,30 @@
 import { useEffect, useRef, useState } from "react";
 
 export default function useVoice() {
-
     const recognitionRef = useRef(null);
+
     const [listening, setListening] = useState(false);
     const [transcript, setTranscript] = useState("");
+
     const shouldKeepListening = useRef(false);
     const lastTranscript = useRef("");
 
-    useEffect(() => {
-
+    const createRecognition = () => {
         const SpeechRecognition =
             window.SpeechRecognition ||
             window.webkitSpeechRecognition;
 
-        if (!SpeechRecognition) return;
+        if (!SpeechRecognition) return null;
 
         const recognition = new SpeechRecognition();
 
         recognition.lang = "en-US";
-
         recognition.interimResults = false;
-
         recognition.continuous = true;
-
         recognition.maxAlternatives = 1;
 
         recognition.onstart = () => {
             setListening(true);
-        };
-
-        recognition.onend = () => {
-
-            setListening(false);
-
-            if (shouldKeepListening.current) {
-
-                setTimeout(() => {
-                    try {
-                        recognition.start();
-                    } catch (e) { }
-                }, 300);
-
-            }
         };
 
         recognition.onresult = (event) => {
@@ -52,45 +34,93 @@ export default function useVoice() {
             if (speech === lastTranscript.current) return;
 
             lastTranscript.current = speech;
-
-            console.log(speech);
-
             setTranscript(speech);
-
         };
 
         recognition.onerror = (event) => {
-            console.log(event.error);
+            console.log("Speech Error:", event.error);
+
+            setListening(false);
+
             if (
-                event.error === "no-speech" ||
-                event.error === "aborted"
+                event.error === "aborted" ||
+                event.error === "audio-capture" ||
+                event.error === "network"
             ) {
-                return;
+                recognitionRef.current = null;
             }
         };
 
-        recognitionRef.current = recognition;
+        recognition.onend = () => {
+            setListening(false);
 
+            if (shouldKeepListening.current) {
+                recognitionRef.current = createRecognition();
+
+                setTimeout(() => {
+                    try {
+                        recognitionRef.current?.start();
+                    } catch (e) {
+                        console.log(e);
+                    }
+                }, 300);
+            }
+        };
+
+        return recognition;
+    };
+
+    useEffect(() => {
+        recognitionRef.current = createRecognition();
+
+        return () => {
+            recognitionRef.current?.stop();
+        };
+    }, []);
+
+    useEffect(() => {
+        const handleVisibility = () => {
+            if (document.visibilityState === "visible") {
+                recognitionRef.current = createRecognition();
+                setListening(false);
+            }
+        };
+
+        document.addEventListener("visibilitychange", handleVisibility);
+
+        return () =>
+            document.removeEventListener(
+                "visibilitychange",
+                handleVisibility
+            );
     }, []);
 
     const startListening = () => {
         shouldKeepListening.current = true;
-         try {
 
-        recognitionRef.current.start();
+        if (!recognitionRef.current) {
+            recognitionRef.current = createRecognition();
+        }
 
-    } catch (e) {}
+        try {
+            recognitionRef.current.start();
+        } catch (e) {
+            recognitionRef.current = createRecognition();
+
+            try {
+                recognitionRef.current.start();
+            } catch {}
+        }
     };
 
     const stopListening = () => {
-         shouldKeepListening.current = false;
+        shouldKeepListening.current = false;
 
-    if (recognitionRef.current) {
-        recognitionRef.current.stop();
-    }
+        recognitionRef.current?.stop();
 
-    // Stop AI voice immediately
-    window.speechSynthesis.cancel();
+        window.speechSynthesis.cancel();
+
+        setListening(false);
     };
 
     const toggleListening = () => {
@@ -106,8 +136,6 @@ export default function useVoice() {
         listening,
         startListening,
         stopListening,
-        toggleListening
-
+        toggleListening,
     };
-
 }
