@@ -62,7 +62,7 @@ Strong problem-solving skills with extensive experience collaborating in <strong
          "Utilized ChatGPT, Gemini AI and Windsurf for development acceleration",
          "Also responsible for developing event rules for files transfers and end to end file transfers"
       ],
-      technologies: ["Angular", "TypeScript", "HTML5", "CSS3", "Bootstrap", "REST API", "Git", "Windsurf", "ChatGPT", "Gemini", "Cursor"]
+      technologies: ["Angular", "TypeScript", "HTML5", "CSS3", "Bootstrap", "REST API", "Git", "Windsurf", "ChatGPT", "Gemini", "Cursor", "Globalscape", "EFT"]
     },
     {
       serialNo: "2",
