@@ -59,7 +59,8 @@ Strong problem-solving skills with extensive experience collaborating in <strong
          "Developed responsive Angular applications using TypeScript, HTML5, CSS3 and REST APIs",
          "Developed 20+ reusable Angular components, reducing development effort by 30%",
          "Delivered multiple product releases in Agile/Scrum environments with sprint-based planning and code reviews",
-         "Utilized ChatGPT, Gemini AI and Windsurf for development acceleration"
+         "Utilized ChatGPT, Gemini AI and Windsurf for development acceleration",
+         "Also responsible for developing event rules for files transfers and end to end file transfers"
       ],
       technologies: ["Angular", "TypeScript", "HTML5", "CSS3", "Bootstrap", "REST API", "Git", "Windsurf", "ChatGPT", "Gemini", "Cursor"]
     },
