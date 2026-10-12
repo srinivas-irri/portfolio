@@ -3,7 +3,7 @@ const portfolioData = {
     name: "Srinivas Irri",
     jobTitle: "Fronted Developer | Sr UI Developer",
     subtitle: "Open to new ideas & building things",
-    description: "Senior UI Developer with 14+ years of overall experience in Frontend Development, including 5+ years of experience in Angular and 2+ years of experience in React. Skilled in building responsive, scalable, and high-performance web applications using HTML5, CSS3, SCSS, JavaScript (ES6+), TypeScript, Bootstrap, Angular, and React. Experienced in developing reusable UI components, integrating REST APIs, optimizing application performance, and delivering user-centric solutions in Agile environments. Proficient in leveraging AI-powered development tools such as ChatGPT, Windsurf, Cursor, and GitHub Copilot to accelerate development, improve code quality, automate repetitive tasks, and enhance overall productivity.",
+    description: "Senior UI Developer with 14+ years of overall experience in Frontend Development, including 5 years of experience in Angular and React js and also having knowledge in GlobalScape EFT server. Skilled in building responsive, scalable, and high-performance web applications using HTML5, CSS3, SCSS, JavaScript (ES6+), TypeScript, Bootstrap, Angular, and React. Experienced in developing reusable UI components, integrating REST APIs, optimizing application performance, and delivering user-centric solutions in Agile environments. Proficient in leveraging AI-powered development tools such as ChatGPT, Windsurf, Cursor, and GitHub Copilot to accelerate development, improve code quality, automate repetitive tasks, and enhance overall productivity. ",
     profileImage: "/assets/profile.png",
     resumeLink: "/resume.pdf",
     email: "srinuvas.irri@gmail.com",
@@ -13,7 +13,7 @@ const portfolioData = {
 
  about: {
     description: [
-  `Senior UI Developer with <strong>14+ years of professional experience</strong> in Frontend Development, including <strong>5+ years of experience in Angular</strong> and <strong>2+ years of experience in React Development</strong>. Specializing in building <strong>high-performance, responsive, scalable, and accessible web applications</strong>.
+  `Senior UI Developer with <strong>14+ years of professional experience</strong> in Frontend Development, including <strong>5 years of experience in Angular</strong> and <strong> React js Development</strong> and <strong>also having knowledge in GlobalScape EFT server</stong>. Specializing in building <strong>high-performance, responsive, scalable, and accessible web applications</strong>.
 
 Proficient in <strong>HTML5, CSS3, SCSS, JavaScript (ES6+), jQuery, TypeScript, Bootstrap, Tailwind CSS, Foundation CSS, Angular, and React</strong>.`,
 
@@ -129,6 +129,21 @@ Strong problem-solving skills with extensive experience collaborating in <strong
       title: "API Integration",
       tools:
         ["Rest", "Restpack",]
+    },
+     {
+      title: "Databases",
+      tools:
+        ["PostgreSQL", "Mysql",]
+    },
+     {
+      title: "Cloud & DevOps",
+      tools:
+        ["AWS", "Globalscape", "EFT",]
+    },
+    {
+      title: "Programming Languages",
+      tools:
+        ["Python",]
     },
     {
       title: "CSS Frameworks & UI Libraries",
